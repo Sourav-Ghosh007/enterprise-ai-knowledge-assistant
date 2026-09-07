@@ -1,0 +1,9 @@
+fastapi==0.141.1
+uvicorn==0.52.4
+pypdf
+langchain-text-splitters
+openai
+python-dotenv
+azure-search-documents
+python-multipart
+azure-storage-blob ## Connect Az blob storage to Python application

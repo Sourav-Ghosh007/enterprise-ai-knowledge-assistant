@@ -1,0 +1,10 @@
+PRODUCT OVERVIEW
+Company: TechNova Solutions
+
+CloudDesk:
+CloudDesk is a SaaS collaboration platform for enterprise teams. It provides document sharing,
+team communication, workflow automation, and audit logging.
+
+DataVault:
+DataVault is an enterprise document management service with encryption, retention policies,
+version history, and role-based access control.
