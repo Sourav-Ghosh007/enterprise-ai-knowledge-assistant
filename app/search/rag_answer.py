@@ -1,5 +1,7 @@
 import os
 from dotenv import load_dotenv
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.models import VectorizedQuery
@@ -8,11 +10,27 @@ from openai import AzureOpenAI
 load_dotenv()
 
 # -----------------------------
+# Azure Key Vault
+# -----------------------------
+key_vault_url = "https://enterprise-rag-kv-2026.vault.azure.net/"
+
+credential = DefaultAzureCredential()
+
+key_vault_client = SecretClient(
+    vault_url=key_vault_url,
+    credential=credential
+)
+
+openai_api_key = key_vault_client.get_secret(
+    "AZURE-OPENAI-API-KEY"
+).value
+
+# -----------------------------
 # Azure OpenAI
 # -----------------------------
 openai_client = AzureOpenAI(
     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+    api_key=openai_api_key,
     api_version="2024-10-21"
 )
 
@@ -52,8 +70,8 @@ vector_query = VectorizedQuery(
 )
 
 results = search_client.search(
-    search_text=query,              # keyword search
-    vector_queries=[vector_query],  # vector search
+    search_text=query,
+    vector_queries=[vector_query],
     select=["content", "source"],
     top=3
 )

@@ -7,3 +7,5 @@ python-dotenv
 azure-search-documents
 python-multipart
 azure-storage-blob ## Connect Az blob storage to Python application
+azure-identity
+azure-keyvault-secrets
