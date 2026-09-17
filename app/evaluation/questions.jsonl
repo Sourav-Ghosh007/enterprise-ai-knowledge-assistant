@@ -1,0 +1,5 @@
+{"question": "How many annual paid leave days does an employee receive?", "answer": "18 annual paid leave days.", "source": "HR_Policy.pdf"}
+{"question": "Is MFA mandatory for VPN access?", "answer": "Yes, MFA is mandatory for VPN access.", "source": "IT_Security_Policy.pdf"}
+{"question": "How quickly must a Severity 1 incident be acknowledged?", "answer": "Within 15 minutes.", "source": "Incident_Response_Policy.pdf"}
+{"question": "How many remote-work days are allowed per week?", "answer": "Up to 3 days per week with manager approval.", "source": "HR_Policy.pdf"}
+{"question": "Which product provides document management?", "answer": "DataVault.", "source": "Product_Overview.txt"}

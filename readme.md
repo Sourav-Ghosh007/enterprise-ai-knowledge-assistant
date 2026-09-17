@@ -8,6 +8,8 @@ To run fastapi with Swagger : uvicorn app.api.main:app --reload
             3. http://127.0.0.1:8000/docs
 
 
+# To check the RAGAS - Evaluation metrix for RAG
+
 
 # Enterprise AI Knowledge Assistant
 
